@@ -9,10 +9,6 @@ list.forEach((list) => {
     })
   })
 
-  function list() {
-    list.classList.toggle.class("done");
-  }
-
 function inputLength() {
   return input.value.length;
 }
