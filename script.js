@@ -1,13 +1,13 @@
 var button = document.getElementById("enter");
 var input = document.getElementById("userinput");
 var ul = document.querySelector("ul");
-var list = document.querySelectorAll("li");
+var li = document.querySelectorAll("li");
 
-list.forEach((list) => {
-  list.addEventListener('click', () => {
-    console.log("Click Worked!!");
-    })
-  })
+function strikeThrough(e) {
+  if (e.target.tagName === "LI") {
+      e.target.classList.toggle("done");
+  }
+}
 
 function inputLength() {
   return input.value.length;
@@ -35,3 +35,5 @@ function addListAfterKeyPress(event) {
 button.addEventListener("click", addListAfterClick);
 
 input.addEventListener("keypress", addListAfterKeyPress);
+
+ul.addEventListener("click", strikeThrough);
