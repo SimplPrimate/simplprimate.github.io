@@ -4,16 +4,18 @@ var color2 = document.querySelector(".color2");
 var body = document.getElementById("gradient");
 var button = document.getElementById("button");
 const randomNum = () => Math.floor(Math.random() *  255);
-var rgb = 'rgb(' + randomNum() + ',' + randomNum() + ',' + randomNum() + ')'
-var rgb2 = 'rgb(' + randomNum() + ',' + randomNum() + ',' + randomNum() + ')'
 
 function randomizeColor() {
+  var rgb = 'rgb(' + randomNum() + ',' + randomNum() + ',' + randomNum() + ')';
+  var rgb2 = 'rgb(' + randomNum() + ',' + randomNum() + ',' + randomNum() + ')';
   body.style.background = 
     "linear-gradient(to right, " 
     + rgb 
     + ", " 
     + rgb2
     + ")";
+    // color1.value = rgb;
+    // color2.value = rbg2;
 
     css.textContent = body.style.background + ";";
 }
