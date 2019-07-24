@@ -4,13 +4,15 @@ var color2 = document.querySelector(".color2");
 var body = document.getElementById("gradient");
 var button = document.getElementById("button");
 const randomNum = () => Math.floor(Math.random() *  255);
+var rgb = 'rgb(' + randomNum() + ',' + randomNum() + ',' + randomNum() + ')'
+var rgb2 = 'rgb(' + randomNum() + ',' + randomNum() + ',' + randomNum() + ')'
 
 function randomizeColor() {
   body.style.background = 
     "linear-gradient(to right, " 
-    + randomNum(); 
+    + rgb 
     + ", " 
-    + randomNum(); 
+    + rgb2
     + ")";
 
     css.textContent = body.style.background + ";";
